@@ -1,5 +1,8 @@
 package Model;
 
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class CarRecord {
     private Integer Id;
     private String make;
@@ -15,6 +18,7 @@ public class CarRecord {
 
     @Override
     public String toString() {
-        return "{" + Id + " " + make + " " + model + " " + price + "}";
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("en", "US"));
+        return "{" + Id + " " + make + " " + model + " " + formatter.format(Float.valueOf(price)) + "}";
     }
 }

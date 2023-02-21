@@ -16,6 +16,6 @@ public class EngineRecord {
     @Override
     public String toString() {
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
-        return "{" + numCylinders + " " + displacment + " " + formatter.format(taxes) + "}";
+        return "{Cyl:" + numCylinders + " Size: " + displacment + " Taxes: " + formatter.format(taxes) + "}";
     }
 }
